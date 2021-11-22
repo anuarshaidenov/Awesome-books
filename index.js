@@ -47,6 +47,7 @@ function removeBook(id) {
 
 function loadData() {
   if (!localStorage.books) {
+    displayBooks();
     return;
   }
   const loadedData = JSON.parse(localStorage.books);
