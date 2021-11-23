@@ -30,6 +30,12 @@ function displayBooks() {
       </div>
           `;
     booksContainer.insertAdjacentHTML('beforeend', markup);
+
+    document.querySelectorAll('.remove-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        removeBook(btn.dataset.id);
+      });
+    });
   });
 }
 
@@ -53,12 +59,6 @@ function loadData() {
   const loadedData = JSON.parse(localStorage.books);
   books = loadedData;
   displayBooks();
-
-  document.querySelectorAll('.remove-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      removeBook(btn.dataset.id);
-    });
-  });
 }
 
 function addBook(title, author) {
