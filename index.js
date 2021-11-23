@@ -1,3 +1,6 @@
+/* eslint-disable max-classes-per-file */
+/* eslint-disable class-methods-use-this */
+
 const booksContainer = document.querySelector('.books-container');
 const bookTitle = document.getElementById('title');
 const bookAuthor = document.getElementById('author');
