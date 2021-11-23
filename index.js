@@ -1,5 +1,4 @@
 /* eslint-disable max-classes-per-file */
-/* eslint-disable class-methods-use-this */
 
 const booksContainer = document.querySelector('.books-container');
 const bookTitle = document.getElementById('title');
@@ -8,12 +7,12 @@ const addBtn = document.getElementById('add-book');
 
 class Book {
   constructor(title, author) {
-    this.id = this.ID();
+    this.id = Book.ID();
     this.title = title;
     this.author = author;
   }
 
-  ID() {
+  static ID() {
     return `_${Math.random().toString(36).substr(2, 9)}`;
   }
 }
@@ -27,7 +26,7 @@ class Books {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 
-  clearInputFields() {
+  static clearInputFields() {
     bookTitle.value = '';
     bookAuthor.value = '';
   }
@@ -57,7 +56,7 @@ class Books {
     this.books.push(newBook);
     this.saveData();
     this.displayBooks();
-    this.clearInputFields();
+    Books.clearInputFields();
   }
 
   removeBook(id) {
