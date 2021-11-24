@@ -17,7 +17,11 @@
 
 html,
 body {
+  background-image: url(../images/section-background.svg);
   background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 150%;
   font-family: 'Patrick Hand SC', cursive;
 }
 
@@ -90,14 +94,14 @@ a {
           box-shadow: 0 0 0 0 black;
 }
 
-.section {
-  text-align: center;
-  padding: 2rem 0;
-}
-
 .header {
   padding: 2rem 0;
   text-align: center;
+}
+
+.section {
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .section-books {
@@ -119,6 +123,7 @@ a {
 }
 
 .books-container {
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
