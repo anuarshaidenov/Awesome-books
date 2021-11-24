@@ -2,13 +2,14 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Patrick Hand SC", cursive;
+  font-family: 'Patrick Hand SC', cursive;
 }
 
 ul {
@@ -18,6 +19,25 @@ ul {
 section {
   text-align: center;
   padding: 2rem 0;
+}
+
+.section-books {
+  position: relative;
+}
+
+.section-books::after {
+  content: '';
+  border-bottom: 255px 15px 225px 15px/15px 225px 15px 255px;
+  border-bottom-left-radius: 100px 50px;
+  border-bottom-right-radius: 700px 30px;
+  background-color: #000;
+  width: 100px;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .container {
@@ -32,26 +52,48 @@ section {
 
 .btn {
   padding: 0.5em 1em;
-  background-color: transparent;
+  background-color: #fff;
   border: 5px solid #000;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  -webkit-box-shadow: 4px 4px 0px 0px black;
+          box-shadow: 4px 4px 0px 0px black;
   font-size: 1rem;
   font-family: inherit;
   font-weight: bold;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 2px 2px 0 0 black;
+          box-shadow: 2px 2px 0 0 black;
+}
+
+.btn:focus {
+  -webkit-box-shadow: 0 0 0 0 black;
+          box-shadow: 0 0 0 0 black;
 }
 
 .books-container {
   border: 5px solid #000;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  overflow: hidden;
 }
 
 .book {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0.5rem;
 }
+
 .book--gray {
   background-color: rgba(163, 163, 163, 0.5);
 }
@@ -59,25 +101,37 @@ section {
 form {
   margin: 0;
 }
+
 form input {
   margin-bottom: 10px;
   border: 4px solid #000;
 }
-form input::-moz-placeholder {
+
+form input::-webkit-input-placeholder {
   font-weight: bold;
   font-family: inherit;
   color: #000;
 }
+
 form input:-ms-input-placeholder {
   font-weight: bold;
   font-family: inherit;
   color: #000;
 }
+
+form input::-ms-input-placeholder {
+  font-weight: bold;
+  font-family: inherit;
+  color: #000;
+}
+
 form input::placeholder {
   font-weight: bold;
   font-family: inherit;
   color: #000;
 }
+
 form button {
   margin-left: 100px;
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */
