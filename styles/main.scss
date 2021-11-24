@@ -59,3 +59,21 @@ section {
     background-color: rgba(163, 163, 163, 0.5);
   }
 }
+
+form {
+  margin: 0;
+
+  input {
+    margin-bottom: 10px;
+    border: 4px solid #000;
+  }
+
+  input::placeholder {
+    font-weight: bold;
+    font-family: inherit;
+    color: #000;
+  }
+  button {
+    margin-left: 100px;
+  }
+}
