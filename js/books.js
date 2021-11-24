@@ -10,13 +10,21 @@ class Books {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 
+  #displayMessage(message) {
+    this.booksContainer.style.padding = '1rem';
+    this.booksContainer.innerHTML = `<h3 class="message">${message}</h3>`;
+  }
+
+  #removeMessage() {
+    this.booksContainer.style.padding = '0';
+    this.booksContainer.innerHTML = '';
+  }
+
   #displayBooks() {
     if (this.books.length <= 0) {
-      this.booksContainer.style.padding = '1rem';
-      this.booksContainer.innerHTML = '<h3 class="message">Your list is empty...</h3>';
+      this.#displayMessage('Your list is empty');
     } else {
-      this.booksContainer.style.padding = '0';
-      this.booksContainer.innerHTML = '';
+      this.#removeMessage();
     }
     let count = 0;
     this.books.forEach((book) => {
