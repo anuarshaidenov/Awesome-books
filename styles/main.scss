@@ -20,9 +20,13 @@ body {
   background-image: url(../images/section-background.svg);
   background-color: #fff;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 100% 150%;
+  background-position: 50% 65%;
+  background-size: 120% 150%;
   font-family: 'Patrick Hand SC', cursive;
+
+  @media (min-width: 768px) {
+    background-position: 50%;
+  }
 }
 
 img {
