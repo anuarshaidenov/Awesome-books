@@ -22,7 +22,7 @@ class Books {
 
   #displayBooks() {
     if (this.books.length <= 0) {
-      this.#displayMessage('Your list is empty');
+      this.#displayMessage('Your list is empty...');
     } else {
       this.#removeMessage();
     }
