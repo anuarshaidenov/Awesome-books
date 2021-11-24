@@ -80,6 +80,8 @@ a {
 .btn:hover {
   -webkit-box-shadow: 2px 2px 0 0 black;
           box-shadow: 2px 2px 0 0 black;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .btn:active {
