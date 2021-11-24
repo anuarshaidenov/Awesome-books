@@ -1,62 +1,74 @@
 @import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+:root {
+  --color-secondary: rgba(177, 177, 177, 0.3);
+  --doodly-br: 255px 15px 225px 15px/15px 225px 15px 255px;
+  --b-main: 5px solid #000;
+}
+
+/* BASE STYLES */
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html,
 body {
+  background-color: #fff;
   font-family: 'Patrick Hand SC', cursive;
+}
+
+img {
+  max-width: 100%;
 }
 
 ul {
   list-style: none;
 }
 
-section {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.section-books {
-  position: relative;
-}
-
-.section-books::after {
-  content: '';
-  border-bottom: 255px 15px 225px 15px/15px 225px 15px 255px;
-  border-bottom-left-radius: 100px 50px;
-  border-bottom-right-radius: 700px 30px;
-  background-color: #000;
-  width: 100px;
-  height: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
   width: 90%;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
+.container--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.message {
+  text-align: left;
+}
+
+/* TYPOGRAPHY STYLES */
 .title {
   font-size: 2.5rem;
 }
 
+/* COMPONENTS STYLES */
 .btn {
   padding: 0.5em 1em;
   background-color: #fff;
-  border: 5px solid #000;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  -webkit-box-shadow: 4px 4px 0px 0px black;
-          box-shadow: 4px 4px 0px 0px black;
+  color: #000;
+  border: var(--b-main);
+  -webkit-box-shadow: 4px 4px 0 0 black;
+          box-shadow: 4px 4px 0 0 black;
+  border-radius: var(--doodly-br);
   font-size: 1rem;
   font-family: inherit;
   font-weight: bold;
@@ -70,14 +82,49 @@ section {
           box-shadow: 2px 2px 0 0 black;
 }
 
-.btn:focus {
+.btn:active {
   -webkit-box-shadow: 0 0 0 0 black;
           box-shadow: 0 0 0 0 black;
 }
 
+.section {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.header {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.section-books {
+  position: relative;
+}
+
+.section-books::after {
+  content: '';
+  border-bottom: var(--b-main);
+  border-bottom-left-radius: 100px 50px;
+  border-bottom-right-radius: 700px 30px;
+  position: absolute;
+  width: 100px;
+  height: 10px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .books-container {
-  border: 5px solid #000;
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: var(--b-main);
+  border-radius: var(--doodly-br);
   overflow: hidden;
 }
 
@@ -92,46 +139,87 @@ section {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
+  background-color: transparent;
 }
 
-.book--gray {
-  background-color: rgba(163, 163, 163, 0.5);
+.book--grey {
+  background-color: var(--color-secondary);
 }
 
-form {
-  margin: 0;
+.book__info {
+  text-align: left;
 }
 
-form input {
-  margin-bottom: 10px;
-  border: 4px solid #000;
+.section-add__container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-form input::-webkit-input-placeholder {
-  font-weight: bold;
+.add-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .add-form {
+    width: 50%;
+  }
+}
+
+.add-form__input {
+  padding: 0.5rem;
+  width: 100%;
+  border: var(--b-main);
+  border-radius: var(--doodly-br);
   font-family: inherit;
-  color: #000;
-}
-
-form input:-ms-input-placeholder {
   font-weight: bold;
-  font-family: inherit;
-  color: #000;
+  font-size: 1rem;
 }
 
-form input::-ms-input-placeholder {
+.add-form__input:focus {
+  outline: none;
+  background-color: var(--color-secondary);
+}
+
+.add-form__input::-webkit-input-placeholder {
+  color: inherit;
+  font-family: inherit;
   font-weight: bold;
-  font-family: inherit;
-  color: #000;
 }
 
-form input::placeholder {
+.add-form__input:-ms-input-placeholder {
+  color: inherit;
+  font-family: inherit;
   font-weight: bold;
-  font-family: inherit;
-  color: #000;
 }
 
-form button {
-  margin-left: 100px;
+.add-form__input::-ms-input-placeholder {
+  color: inherit;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.add-form__input::placeholder {
+  color: inherit;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .add-form__btn {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
 }
 /*# sourceMappingURL=main.css.map */

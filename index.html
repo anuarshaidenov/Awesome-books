@@ -8,21 +8,37 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="container"></div>
+    </header>
     <main>
-      <section class="section-books">
-        <div class="container">
-          <h1 class="title">Awesome books</h1>
+      <section class="section section-books">
+        <div class="container container--flex">
+          <h2 class="title">Awesome books</h2>
           <ul class="books-container"></ul>
         </div>
       </section>
-
-      <section class="section-add">
-        <div class="container">
+      <section class="section section-add">
+        <div class="container container--flex section-add__container">
           <h2 class="title">Add a new book</h2>
-          <form action="/">
-            <input type="text" id="title" placeholder="Title" /><br />
-            <input type="text" id="author" placeholder="Author" /><br />
-            <button class="btn" id="add-book" type="submit">Add</button>
+          <form class="add-form" action="/">
+            <input
+              class="add-form__input"
+              type="text"
+              id="title"
+              placeholder="Title"
+              autocomplete="off"
+            />
+            <input
+              class="add-form__input"
+              type="text"
+              id="author"
+              placeholder="Author"
+              autocomplete="off"
+            />
+            <button class="btn add-form__btn" id="add-book" type="submit">
+              Add
+            </button>
           </form>
         </div>
       </section>

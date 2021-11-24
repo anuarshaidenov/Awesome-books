@@ -11,25 +11,31 @@ class Books {
   }
 
   #displayBooks() {
-    this.booksContainer.innerHTML = '';
+    if (this.books.length <= 0) {
+      this.booksContainer.style.padding = '1rem';
+      this.booksContainer.innerHTML = '<h3 class="message">Your list is empty...</h3>';
+    } else {
+      this.booksContainer.style.padding = '0';
+      this.booksContainer.innerHTML = '';
+    }
     let count = 0;
     this.books.forEach((book) => {
       const markup = `
-              <li class="book ${count % 2 === 0 ? 'book--gray' : ''}">
-            <h3 class="book-title">"${book.title}" by ${book.author}</h3>
-            <button class="btn remove-btn" data-id="${
-              book.id
-            }" type="button">Remove</button>
+              <li class="book ${count % 2 === 0 ? 'book--grey' : ''}">
+              <h3 class="book__info">"${book.title}" by ${book.author}</h3>
+            <button class="btn btn-remove" data-id="${
+  book.id
+}" type="button">Remove</button>
           </li>
               `;
       this.booksContainer.insertAdjacentHTML('beforeend', markup);
-      count += 1;
-      document.querySelectorAll('.remove-btn').forEach((btn) => {
+      document.querySelectorAll('.btn-remove').forEach((btn) => {
         btn.addEventListener('click', () => {
           const bookID = btn.dataset.id;
           this.removeBook(bookID);
         });
       });
+      count += 1;
     });
   }
 
