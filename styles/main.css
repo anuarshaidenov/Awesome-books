@@ -99,6 +99,8 @@ a {
 .btn:active {
   -webkit-box-shadow: 0 0 0 0 black;
           box-shadow: 0 0 0 0 black;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .header {
