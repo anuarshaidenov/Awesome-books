@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Patrick Hand SC', cursive;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  background-color: transparent;
+  border: 5px solid #000;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.books-container {
+  border: 5px solid #000;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+}
+
+.book--gray {
+  background-color: rgba(163, 163, 163, 0.5);
+}
+/*# sourceMappingURL=main.css.map */

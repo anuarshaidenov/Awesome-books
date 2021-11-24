@@ -12,16 +12,18 @@ class Books {
 
   #displayBooks() {
     this.booksContainer.innerHTML = '';
+    let count = 0;
     this.books.forEach((book) => {
       const markup = `
-              <div class="book">
-            <h3 class="title">${book.title}</h3>
-            <h3 class="author">${book.author}</h3>
-            <button class="remove-btn" data-id="${book.id}" type="button">Remove</button>
-            <hr />
-          </div>
+              <li class="book ${count % 2 === 0 ? 'book--gray' : ''}">
+            <h3 class="book-title">"${book.title}" by ${book.author}</h3>
+            <button class="btn remove-btn" data-id="${
+              book.id
+            }" type="button">Remove</button>
+          </li>
               `;
       this.booksContainer.insertAdjacentHTML('beforeend', markup);
+      count += 1;
       document.querySelectorAll('.remove-btn').forEach((btn) => {
         btn.addEventListener('click', () => {
           const bookID = btn.dataset.id;
