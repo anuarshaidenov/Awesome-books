@@ -10,9 +10,15 @@ class Books {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 
-  #displayMessage(message) {
-    this.booksContainer.style.padding = '1rem';
-    this.booksContainer.innerHTML = `<h3 class="message">${message}</h3>`;
+  #displayEmpty(message) {
+    this.booksContainer.style.padding = '2rem';
+    this.booksContainer.innerHTML = `<h3 class="message">${message} <a href="#add" class="btn">add a new book</a></h3> `;
+  }
+
+  static #displayAdd() {
+    const message = document.getElementById('contact-message');
+    message.classList.remove('message-hidden');
+    setTimeout(() => message.classList.add('message-hidden'), 5000);
   }
 
   #removeMessage() {
@@ -22,7 +28,7 @@ class Books {
 
   #displayBooks() {
     if (this.books.length <= 0) {
-      this.#displayMessage('Your list is empty...');
+      this.#displayEmpty('Your list is empty...');
     } else {
       this.#removeMessage();
     }
@@ -51,6 +57,7 @@ class Books {
     const newBook = new Book(title, author);
     this.books.push(newBook);
     this.#saveData();
+    Books.#displayAdd();
     this.#displayBooks();
   }
 
