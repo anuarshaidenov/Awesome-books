@@ -32,11 +32,22 @@
   border: var(--b-main);
   border-radius: var(--doodly-br);
 
+  &__item {
+    padding: 0 0.5rem;
+
+    &--bd {
+      border-right: 4px solid #000;
+      border-left: 4px solid #000;
+      border-radius: 3px;
+    }
+  }
+
   &__links {
     display: none;
 
     @media (min-width: 768px) {
       display: flex;
+      gap: 1rem;
     }
 
     a {
@@ -67,14 +78,6 @@
       a {
         font-size: 1.2rem;
       }
-    }
-  }
-
-  &__item {
-    margin-right: 1rem;
-
-    &:last-of-type {
-      margin-right: 0;
     }
   }
 }

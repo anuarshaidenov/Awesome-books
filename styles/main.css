@@ -182,6 +182,16 @@ main {
   border-radius: var(--doodly-br);
 }
 
+.nav__item {
+  padding: 0 0.5rem;
+}
+
+.nav__item--bd {
+  border-right: 4px solid #000;
+  border-left: 4px solid #000;
+  border-radius: 3px;
+}
+
 .nav__links {
   display: none;
 }
@@ -191,6 +201,7 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 1rem;
   }
 }
 
@@ -232,14 +243,6 @@ main {
 
 .nav__links--mobile a {
   font-size: 1.2rem;
-}
-
-.nav__item {
-  margin-right: 1rem;
-}
-
-.nav__item:last-of-type {
-  margin-right: 0;
 }
 
 .section-books {
