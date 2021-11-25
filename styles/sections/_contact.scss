@@ -1,0 +1,22 @@
+.section-contact {
+  .container {
+    overflow: hidden;
+    padding: 1rem;
+    background-color: #fff;
+    border: var(--b-main);
+    border-radius: var(--doodly-br);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  &__credentials {
+    list-style: disc;
+  }
+}

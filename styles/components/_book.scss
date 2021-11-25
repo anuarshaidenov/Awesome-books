@@ -1,0 +1,15 @@
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: transparent;
+
+  &--grey {
+    background-color: var(--color-secondary);
+  }
+
+  &__info {
+    text-align: left;
+  }
+}

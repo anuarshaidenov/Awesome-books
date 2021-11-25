@@ -9,18 +9,53 @@
   </head>
   <body>
     <header class="header">
-      <div class="container"></div>
+      <div class="container">
+        <nav class="nav">
+          <h3 class="logo"><a href="#">Awesome Books</a></h3>
+          <button class="hamburger-btn" type="button" id="hamburger">
+            <img src="./images/hamburger.svg" alt="Hamburger Icon" />
+          </button>
+          <button class="hamburger-btn hidden" type="button" id="close">
+            <img src="./images/close-icon.svg" alt="Close Icon" />
+          </button>
+          <ul class="nav__links--mobile translated" id="menu">
+            <li class="nav__item">
+              <a data-link="home" class="current" href="#">List</a>
+            </li>
+            <li class="nav__item">
+              <a data-link="add" href="#add">Add new</a>
+            </li>
+            <li class="nav__item">
+              <a data-link="contact" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a href="#" data-link="home" class="current">List</a>
+            </li>
+            <li class="nav__item nav__item--bd">
+              <a href="#add" data-link="add">Add new</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" data-link="contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="date">
+          <h3 class="date__now" id="date">Date</h3>
+        </div>
+      </div>
     </header>
     <main>
-      <section class="section section-books">
+      <section class="section section-books" id="section-books">
         <div class="container container--flex">
-          <h2 class="title">Awesome books</h2>
+          <h1 class="title">All awesome books</h1>
           <ul class="books-container"></ul>
         </div>
       </section>
-      <section class="section section-add">
+      <section class="section section-add hidden" id="section-add">
         <div class="container container--flex section-add__container">
-          <h2 class="title">Add a new book</h2>
+          <h1 class="title">Add a new book</h1>
           <form class="add-form" action="/">
             <input
               class="add-form__input"
@@ -40,9 +75,36 @@
               Add
             </button>
           </form>
+          <p class="section-add__message message-hidden" id="contact-message">
+            The book has been added to you list successfully ✔️
+          </p>
+        </div>
+      </section>
+      <section class="section section-contact hidden" id="section-contact">
+        <div class="container container--flex">
+          <h1 class="title">Contact information</h1>
+          <div class="section-contact__info">
+            <h3 class="subtitle">
+              Do you have any questions or you just want to say hello? <br />
+              You can reach out to us!
+            </h3>
+            <ul class="section-contact__credentials">
+              <li>Our email: mail@mail.com</li>
+              <li>Our phone number: 05330131298</li>
+              <li>Our addy: Streetname 22, 90210 The Ends</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
-    <script type="module" src="js/index.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <nav class="nav">
+          <h3 class="logo">Awesome Books</h3>
+          <p>All rights reserved.</p>
+        </nav>
+      </div>
+    </footer>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

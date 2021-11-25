@@ -10,9 +10,11 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Vanilla JavaScript
+- HTML
+- SCSS
+- Responsive Design
+- npm
 
 ## Live Demo
 
@@ -20,22 +22,47 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+1. Clone the repository using
 
-### Setup
+```
+git clone https://github.com/anuarshaidenov/LDN-film-fest.git
+```
 
-### Install
+2. cd into the cloned repository
 
-### Usage
+```
+cd LDN-film-fest
+```
 
-### Run tests
+3. You now have the access to the files on your local machine!
 
-### Deployment
+#### Optional steps
+
+Install the node_modules/ folder to be able to locally run the linter commands. Run:
+
+```
+npm install
+```
+
+To check Webhint linter errors run:
+
+```
+npx hint .
+```
+
+To check Stylelint linter errors run:
+
+```
+npx stylelint "**/*.scss"
+```
+
+To check ESLint errors run:
+
+```
+npx eslint .
+```
 
 ## Authors
 
@@ -55,17 +82,11 @@ To get a local copy up and running follow these simple example steps.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/anuarshaidenov/Awesome-books/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 

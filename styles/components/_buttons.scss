@@ -1,0 +1,23 @@
+.btn {
+  padding: 0.5em 1em;
+  background-color: #fff;
+  color: #000;
+  border: var(--b-main);
+  box-shadow: 4px 4px 0 0 black;
+  border-radius: var(--doodly-br);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 2px 2px 0 0 black;
+    transform: translateY(2px);
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 black;
+    transform: translateY(2px);
+  }
+}

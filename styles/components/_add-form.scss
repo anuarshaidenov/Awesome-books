@@ -1,0 +1,42 @@
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: #fff;
+  border: var(--b-main);
+  border-radius: var(--doodly-br);
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+
+  &__input {
+    padding: 0.5rem;
+    width: 100%;
+    border: var(--b-main);
+    border-radius: var(--doodly-br);
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  &__input:focus {
+    outline: none;
+    background-color: var(--color-secondary);
+  }
+
+  &__input::placeholder {
+    color: inherit;
+    font-family: inherit;
+    font-weight: bold;
+  }
+
+  &__btn {
+    @media (min-width: 768px) {
+      align-self: flex-end;
+    }
+  }
+}
