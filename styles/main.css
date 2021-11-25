@@ -182,16 +182,6 @@ main {
   border-radius: var(--doodly-br);
 }
 
-.nav__item {
-  padding: 0 0.5rem;
-}
-
-.nav__item--bd {
-  border-right: 4px solid #000;
-  border-left: 4px solid #000;
-  border-radius: 3px;
-}
-
 .nav__links {
   display: none;
 }
