@@ -27,13 +27,13 @@ To get a local copy up and running follow these simple example steps.
 1. Clone the repository using
 
 ```
-git clone https://github.com/anuarshaidenov/LDN-film-fest.git
+git clone https://github.com/anuarshaidenov/Awesome-books.git
 ```
 
 2. cd into the cloned repository
 
 ```
-cd LDN-film-fest
+cd Awesome-books
 ```
 
 3. You now have the access to the files on your local machine!
