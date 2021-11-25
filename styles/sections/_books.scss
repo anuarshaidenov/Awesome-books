@@ -1,0 +1,25 @@
+.section-books {
+  position: relative;
+
+  &::after {
+    content: '';
+    border-bottom: var(--b-main);
+    border-bottom-left-radius: 100px 50px;
+    border-bottom-right-radius: 700px 30px;
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.books-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border: var(--b-main);
+  border-radius: var(--doodly-br);
+  overflow: hidden;
+}

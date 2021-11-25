@@ -76,30 +76,25 @@ main {
   gap: 2rem;
 }
 
-.message {
-  color: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 1rem;
+.date {
+  text-align: right;
 }
 
-.message__add {
-  color: var(--color-primary);
+.section {
+  text-align: center;
+  padding: 2rem 0;
 }
 
-/* TYPOGRAPHY STYLES */
+.message-hidden {
+  opacity: 0 !important;
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
+}
+
 .title {
   font-size: 2.5rem;
 }
 
-/* COMPONENTS STYLES */
 .btn {
   padding: 0.5em 1em;
   background-color: #fff;
@@ -128,6 +123,20 @@ main {
           box-shadow: 0 0 0 0 black;
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
+}
+
+.message {
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
 }
 
 .header {
@@ -233,15 +242,6 @@ main {
   margin-right: 0;
 }
 
-.date {
-  text-align: right;
-}
-
-.section {
-  text-align: center;
-  padding: 2rem 0;
-}
-
 .section-books {
   position: relative;
 }
@@ -309,12 +309,6 @@ main {
           transform: translateY(0);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-
-.message-hidden {
-  opacity: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .add-form {
