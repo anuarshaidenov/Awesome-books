@@ -1,4 +1,5 @@
-import { DateTime } from '../node_modules/luxon/build/es6/luxon.js';
+// eslint-disable-next-line import/no-unresolved
+import { DateTime } from 'https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/es6/luxon.min.js';
 import mobileMenu from './mobileMenu.js';
 import Books from './books.js';
 import sectionsEl from './sections.js';
