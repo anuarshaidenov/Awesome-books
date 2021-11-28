@@ -1,12 +1,11 @@
+// eslint-disable-next-line import/no-unresolved
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+
 class Book {
   constructor(title, author) {
-    this.id = Book.ID();
+    this.id = uuidv4();
     this.title = title;
     this.author = author;
-  }
-
-  static ID() {
-    return `_${Math.random().toString(36).substr(2, 9)}`;
   }
 }
 
